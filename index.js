@@ -50,7 +50,7 @@ metagen.formats.amd = files => `define([
   }
 });`
 metagen.formats.es6 = files => `${
-  files.map(file => `import ${varName(file)} from './${file};'`).join('\n')
+  files.map(file => `import ${varName(file)} from './${file}';`).join('\n')
 }
 export default {
   ${files.map(varName).join(',\n')}
